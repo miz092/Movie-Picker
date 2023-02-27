@@ -10,6 +10,7 @@ import "./Searchbar.css";
 import { fetchGenres } from "../../api.js";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Searchbar.css";
 
 export default function Searchbar(props) {
   const { handleFetch } = props;
