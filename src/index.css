@@ -3,7 +3,9 @@
 :root {
   --font-family: "Manrope", sans-serif;
   --color-header: #fb8500;
+  --color-bg: #fb8500;
   --color-footer: #000000;
   --color-text: #ffffff;
   --color-subtext: #ffffff;
+  --color-accent: #ffb703;
 }

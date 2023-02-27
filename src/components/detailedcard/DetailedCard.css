@@ -1,19 +1,19 @@
-.actorCard {
+.detailedCard {
   width: 100%;
-  max-width: 350px;
-  height: 540px;
+  max-width: 1000px;
+  height: 1200px;
   margin: 30px;
   position: relative;
   background-size: cover;
   background-position: top;
   transition: all 0.3s linear;
   overflow: hidden;
+  border-radius: 10px;
 }
 
-.actorCard-content {
+.detailedCard__card-content {
   width: 100%;
-
-  background-color: rgba(33, 158, 188, 0.13);
+  text-shadow: black 2px 2px 2px;
   backdrop-filter: blur(40px) saturate(180%);
   -webkit-backdrop-filter: blur(30px) saturate(180%);
   text-align: center;
@@ -24,29 +24,35 @@
   transition: all 0.3s linear;
 }
 
-.actorCard-content h2 {
+.detailedCard__card-content h2 {
   font-family: var(--font-family);
-  color: var(--color-subtext);
+
   font-size: 25px;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
+
   padding-bottom: 0;
 }
-.actorCard-content p {
+
+.detailedCard__card-content p {
   font-family: var(--font-family);
-  color: rgb(255, 255, 255);
+  margin: 4vh;
   font-size: 25px;
   font-weight: 700;
   text-align: center;
-  text-transform: uppercase;
+  line-height: 35px;
   padding-bottom: 0;
 }
-
-.actorCard:hover {
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+.detailedCard__card-content:hover {
+  transition: 1s ease-in-out;
+  background: #1d3557;
 }
 
-.actorCard:hover .actorCard-content {
+.detailedCard:hover {
+  box-shadow: 15px 15px 35px rgba(0, 0, 0, 0.8);
+}
+
+.detailedCard:hover .detailedCard__card-content {
   transform: translateY(0);
 }

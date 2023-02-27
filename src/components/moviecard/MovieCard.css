@@ -9,12 +9,12 @@
   background-position: top;
   transition: all 0.3s linear;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .card-content {
   width: 100%;
 
-  background-color: rgba(14, 4, 4, 0.13);
   backdrop-filter: blur(40px) saturate(180%);
   -webkit-backdrop-filter: blur(30px) saturate(180%);
   text-align: center;
@@ -28,7 +28,6 @@
 .card-content h2 {
   font-family: var(--font-family);
 
-  color: rgb(255, 255, 255);
   font-size: 25px;
   font-weight: 700;
   text-align: center;
@@ -39,7 +38,7 @@
 
 .card-content .btn {
   color: #fff;
-  background: red;
+  background: rgba(255, 183, 3, 0.6);
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 18px;
@@ -47,24 +46,18 @@
   border-radius: 5px;
   position: relative;
   border: 0;
+  animation: none;
   outline: none;
+}
+.card-content:hover {
+  transition: 1s ease-in-out;
+  background: #1d3557;
 }
 
 .card:hover {
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 15px 15px 35px rgba(0, 0, 0, 0.8);
 }
 
 .card:hover .card-content {
   transform: translateY(0);
-}
-
-.infoButton {
-  width: 180px;
-  height: 60px;
-  cursor: pointer;
-  border-radius: 5px;
-  background: transparent;
-  border: 1px solid #ffc400;
-  outline: none;
-  transition: 1s ease-in-out;
 }

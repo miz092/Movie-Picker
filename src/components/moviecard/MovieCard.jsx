@@ -1,32 +1,27 @@
 import "./MovieCard.css";
+import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import StyledButton from "../styledButton/StyledButton.jsx";
 
 function MovieCard({ movie }) {
-  console.log(movie);
+  const navigate = useNavigate();
+  const id = movie.id.substring(7, movie.id.length - 1);
+  const [image, setImage] = useState(
+    "https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_available.png"
+  );
+  const handleCardClick = () => {
+    navigate(`/movie/${id}`);
+    window.location.reload();
+  };
+  useEffect(() => {
+    movie?.image?.url ? setImage(movie.image.url) : (prevState) => prevState;
+  }, []);
+
   return (
-    <div
-      className="card"
-      style={{ backgroundImage: `url(${movie.image.url})` }}
-    >
+    <div className="card" style={{ backgroundImage: `url(${image})` }}>
       <div className="card-content">
-        <h2>{movie.title}</h2>
-        <button className="btn">
-          <svg
-            width="180px"
-            height="60px"
-            viewBox="0 0 180 60"
-            className="border"
-          >
-            <polyline
-              points="179,1 179,59 1,59 1,1 179,1"
-              className="bg-line"
-            />
-            <polyline
-              points="179,1 179,59 1,59 1,1 179,1"
-              className="hl-line"
-            />
-          </svg>
-          <span>Choose movie</span>
-        </button>
+        <h2>{movie?.title}</h2>
+        <StyledButton onClick={handleCardClick} text={"More"} />
       </div>
     </div>
   );

@@ -1,0 +1,4 @@
+.input .MuiOutlinedInput-notchedOutline,
+.input .MuiOutlinedInput-notchedOutline:focus {
+  border-color: #ffb703;
+}

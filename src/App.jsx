@@ -5,10 +5,10 @@ import CardContainer from "./containers/cardcontainer/CardContainer";
 import SearchBar from "./components/searchbar/Searchbar.jsx";
 import { useState } from "react";
 import { fetchMoviesByFilter } from "./api.js";
+import MoviePage from "./containers/moviePage/MoviePage";
 
 function App() {
   const [loading, setLoading] = useState(false);
-
   const [movies, setMovies] = useState([]);
 
   const handleFetch = async (
@@ -51,7 +51,7 @@ function App() {
             path="/"
             element={<CardContainer {...{ movies, loading }} />}
           />
-          {/* <Route path="/movie/:id" element={<MoviePage />} /> */}
+          <Route path="/movie/:id" element={<MoviePage />} />
         </Routes>
       </Router>
     </div>

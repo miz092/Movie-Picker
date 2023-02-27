@@ -2,15 +2,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* background: linear-gradient(
+    90deg,
+    rgba(230, 57, 70, 1) 0%,
+    rgba(69, 123, 157, 1) 50%,
+    rgba(168, 218, 220, 1) 100%
+  ); */
+  background-color: var(--color-bg);
   padding: 2rem 6rem;
+  cursor: pointer;
 }
 
 .moviePicker__header-links_logo {
   margin-right: 2rem;
 }
 .moviePicker__header-links_logo img {
-  max-height: 50px;
-  /* max-width: 62.5px; */
+  max-height: 80px;
 }
 
 @media screen and (max-width: 700px) {

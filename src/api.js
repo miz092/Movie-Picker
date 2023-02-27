@@ -14,8 +14,7 @@ async function fetchBySearch(query) {
     `https://imdb8.p.rapidapi.com/auto-complete?q=${query}`,
     options
   );
-  const data = await response.json();
-  return data;
+  return await response.json();
 }
 
 async function fetchGenres() {
@@ -24,8 +23,7 @@ async function fetchGenres() {
       "https://imdb8.p.rapidapi.com/title/list-popular-genres",
       options
     );
-    const data = await response.json();
-    return data;
+    return await response.json();
   } catch (err) {
     console.error(err);
   }
@@ -59,7 +57,7 @@ async function fetchMoreLikeThis(id, limit = 6) {
   const numMovies = Math.min(newData.length, limit);
   const fetchedMovies = [];
 
-  const promise = new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     const fetchInterval = setInterval(() => {
       if (movies.length >= numMovies) {
         clearInterval(fetchInterval);
@@ -74,15 +72,13 @@ async function fetchMoreLikeThis(id, limit = 6) {
       fetchedMovies.push(id);
 
       fetch(`https://imdb8.p.rapidapi.com/title/get-base?tconst=${id}`, options)
-        .then((response) => response.json())
-        .then((response) => {
-          movies.push(response);
-        })
-        .catch((err) => console.error(err));
+          .then((response) => response.json())
+          .then((response) => {
+            movies.push(response);
+          })
+          .catch((err) => console.error(err));
     }, 500);
   });
-
-  return promise;
 }
 
 async function fetchCast(id) {
@@ -92,6 +88,7 @@ async function fetchCast(id) {
       options
     );
     const data = await response.json();
+    console.log(data);
     return data;
   } catch (err) {
     console.error(err);
