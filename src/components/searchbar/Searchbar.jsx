@@ -16,13 +16,13 @@ export default function Searchbar(props) {
   const [loading, setLoading] = useState(false);
 
   const [genre, setGenre] = useState("");
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState("Lord of the rings");
   const [startDate, setStartDate] = useState("1900-01-01");
   const [endDate, setEndDate] = useState(new Date().toISOString().slice(0, 10));
   const [limit, setLimit] = useState(10);
   const [minRating, setMinRating] = useState("5");
   const [minLength, setMinLength] = useState("30");
-  const [maxLength, setMaxLength] = useState("90");
+  const [maxLength, setMaxLength] = useState("300");
   const [minVotes, setMinVotes] = useState("1000");
 
   const navigate = useNavigate();
