@@ -1,6 +1,6 @@
 import "./App.css";
 import Header from "./components/header/Header.jsx";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import CardContainer from "./containers/cardcontainer/CardContainer";
 import SearchBar from "./components/searchbar/Searchbar.jsx";
 import { useState } from "react";
