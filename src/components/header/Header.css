@@ -28,6 +28,11 @@
 
 @media screen and (max-width: 550px) {
   .moviePicker__header {
-    padding: 2rem;
+    padding: 2rem 4rem;
+    justify-content: center;
+  }
+
+  .moviePicker__header-links_logo {
+    margin: 0;
   }
 }

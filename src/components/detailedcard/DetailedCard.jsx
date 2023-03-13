@@ -1,6 +1,5 @@
 import "./DetailedCard.css";
 
-
 export default function DetailedCard({ movie }) {
   return (
     <div
