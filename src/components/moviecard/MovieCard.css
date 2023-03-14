@@ -44,6 +44,7 @@
   font-size: 18px;
   line-height: 27px;
   border-radius: 5px;
+  margin-bottom: 1.5rem;
   position: relative;
   border: 0;
   animation: none;
@@ -60,4 +61,18 @@
 
 .card:hover .card-content {
   transform: translateY(0);
+}
+@media only screen and (max-width: 1000px) {
+  .card-content:focus {
+    transition: 1s ease-in-out;
+    background: #1d3557;
+  }
+
+  .card:focus {
+    box-shadow: 15px 15px 35px rgba(0, 0, 0, 0.8);
+  }
+
+  .card:focus .card-content {
+    transform: translateY(0);
+  }
 }

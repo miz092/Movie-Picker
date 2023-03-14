@@ -50,3 +50,12 @@
 .actorCard:hover .actorCard-content {
   transform: translateY(0);
 }
+@media only screen and (max-width: 1000px) {
+  .actorCard:focus {
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+  }
+
+  .actorCard:focus .actorCard-content {
+    transform: translateY(0);
+  }
+}
