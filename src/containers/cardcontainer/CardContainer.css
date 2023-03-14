@@ -6,6 +6,7 @@
   box-sizing: border-box;
   width: 100%;
   justify-content: space-evenly;
+  min-height: 100vh;
   visibility: visible;
   height: 100%;
   overflow: hidden;
